@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            text-decoration: none;
+        }
+        .navbar{
+            background-color: black;
+        }
+        ul{
+            display: flex;
+            justify-content:center ;
+        }
+        ul li a{
+            color: aliceblue;
+        }
+        ul li{
+            padding:10px 20px ;
+
+        }
+
+                        /* pop up */
+
+        li::before{
+            position: relative;
+            left: 50%;
+            content: "";
+            width: 0%;
+            height: 2px;
+            background-color: yellow;
+            display: block;
+            border-radius: 1cm;
+            transition: all 0.8s;
+        }
+        li::after{
+            position: relative;
+            left: 50%;
+            content: "";
+            width: 0%;
+            height: 2px;
+            background-color: yellow;
+            display: block;
+            border-radius: 1cm; 
+            transition:all 0.8s; 
+
+        }
+        li:hover::after{
+            position: relative;
+            width: 100%;
+            right: 0%;
+            left: 0%;
+        }
+        li:hover::before{
+            position: relative;
+            width: 100%;
+            right: 0%;
+            left: 0%;
+        }
+
+                            /* line wise */
+        /* li::before{
+            position: relative;
+          
+            content: "";
+            width: 0%;
+            height: 2px;
+            background-color: yellow;
+            display: block;
+            border-radius: 1cm;
+            transition: all 0.8s;
+        }
+        li::after{
+            position: relative;
+          left: 100%;
+            content: "";
+            width: 0%;
+            height: 2px;
+            background-color: yellow;
+            display: block;
+            border-radius: 1cm; 
+            transition:all 0.8s; 
+
+        }
+        li:hover::after{
+            position: relative;
+            left: 0%;
+            width: 100%;
+            
+        }
+        li:hover::before{
+            position: relative;
+            width: 100%;
+        
+        } */
+
+
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <ul>
+            <li><a href="">home</a></li>
+            <li><a href="">contact</a></li>
+            <li><a href="">About</a></li>
+            <li><a href="">blog</a></li>
+            <li><a href="">feedback</a></li>
+        </ul>
+    </div>
+</body>
+</html>
